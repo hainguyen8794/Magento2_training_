@@ -13,7 +13,7 @@ Nhận thấy sự bất cập này, PHP đã bổ sung chức năng namespace �
  -Require/include : dùng để import một file php vào trong một file php khác  
 Khi sử dụng namespace ta có thể import những file có tên giống nhau mà không hề xảy ra xung đột 
 6, 
-Requiresjs, knockoutjs , evenjs , domReadyjs
+
 7,
 -method debug in PHP: die(), echo, var_dump();
 

@@ -1,24 +1,8 @@
-define(['requirejs'], function(ko, first, last) {
-    class GetData {
-        constructor() {
-            this.init();
-        }
-
-        init() {
-            // Here's my data model
-            var ViewModel = function(first, last) {
-                this.firstName = ko.observable(first);
-                this.lastName = ko.observable(last);
-             
-                this.fullName = ko.pureComputed(function() {
-                    // Knockout tracks dependencies automatically. It knows that fullName depends on firstName and lastName, because these get called when evaluating fullName.
-                    return this.firstName() + " " + this.lastName();
-                }, this);
-            };
-             
-            ko.applyBindings(new ViewModel("Hai ", "nguyen")); // This makes Knockout get to work
-        }
+requirejs.config({ // cau hinh` main cua? require.js
+    paths: {
+        'requirejs': 'lib/knockout', // thu vien cua? knockout
+        'demo' : 'knockout' // hello world
     }
-
-    return new GetData();
 });
+
+requirejs(['demo']);
